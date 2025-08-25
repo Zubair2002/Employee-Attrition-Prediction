@@ -1,0 +1,77 @@
+Employee Attrition Prediction (Machine Learning Project)
+
+Project Overview:
+This project focuses on predicting employee attrition using machine learning techniques. Employee attrition is a critical HR metric, as reducing turnover can save significant costs associated with hiring and training new staff. The goal was to build predictive models to identify employees at risk of leaving and understand the key factors driving attrition.
+
+Dataset:
+
+Source: IBM HR Analytics Employee Attrition dataset
+
+Records: 1,470 employees
+
+Features: 35 columns, including demographics, job role, performance, salary, and satisfaction metrics
+
+Target Variable: Attrition (Yes/No)
+
+Steps Performed:
+
+Data Preprocessing:
+
+Identified categorical and numerical features.
+
+Converted categorical features into numeric format using one-hot encoding (pd.get_dummies).
+
+Split the dataset into training and testing sets.
+
+Ensured all features were numeric for ML model compatibility.
+
+Model Training & Evaluation:
+
+Built three models:
+
+Logistic Regression – interpretable coefficients to see feature impact.
+
+Random Forest – ensemble tree-based model for capturing non-linear patterns.
+
+XGBoost – gradient boosting model for high predictive performance.
+
+Evaluated models using metrics: Accuracy, Precision, Recall, F1-Score, ROC-AUC.
+
+Observed that XGBoost achieved the highest accuracy (≈85%), while Logistic Regression provided interpretable insights.
+
+Feature Importance & Explainability:
+
+Extracted coefficients from Logistic Regression to identify features increasing attrition risk.
+
+Extracted feature importances from Random Forest and XGBoost.
+
+Used SHAP (SHapley Additive exPlanations) for:
+
+Global understanding of top drivers of attrition.
+
+Local explanation for individual high-risk employees.
+
+Key drivers identified: OverTime, JobSatisfaction, YearsAtCompany, MonthlyIncome, Age.
+
+Business Impact:
+
+Using model predictions, HR can identify employees at high risk of leaving.
+
+Example: Reducing attrition by 10% can save hundreds of thousands of dollars in rehiring and training costs.
+
+Deliverables Produced:
+
+Trained machine learning models: Logistic Regression, Random Forest, XGBoost
+
+Evaluation metrics and classification reports for all models
+
+Feature importance tables for all models
+
+SHAP visualizations:
+
+Global summary plot (shap_summary.png)
+
+Local explanation for highest-risk employee (shap_force_highest_risk.html)
+
+Conclusion:
+This project demonstrates how ML models can be used for predictive HR analytics, helping organizations proactively manage employee attrition and optimize workforce planning. It also shows the value of model explainability (via SHAP) in providing actionable insights to HR managers.
